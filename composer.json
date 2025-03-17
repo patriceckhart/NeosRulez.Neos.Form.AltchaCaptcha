@@ -1,0 +1,19 @@
+{
+  "description": "ALTCHA Next-Gen CAPTCHA integration for Neos CMS",
+  "type": "neos-package",
+  "name": "neosrulez/neos-form-altchacaptcha",
+  "require": {
+    "neos/neos": "^7.0 || ^8.0 || ^8.1 || ^8.2 || ^8.3",
+    "altcha-org/altcha": "v1.1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "NeosRulez\\Neos\\Form\\AltchaCaptcha\\": "Classes/"
+    }
+  },
+  "extra": {
+    "neos": {
+      "package-key": "NeosRulez.Neos.Form.AltchaCaptcha"
+    }
+  }
+}

@@ -1,0 +1,16 @@
+prototype(Neos.Neos:Page) {
+
+    altchaJs = Neos.Fusion:Tag {
+        @if.condition = ${q(documentNode).children('main').find('[instanceof NeosRulez.Neos.Form.AltchaCaptcha:Captcha]').filter('[_hidden=false]').get() ? true : false}
+        @position = 'end'
+        tagName = 'script'
+        attributes {
+            src = Neos.Fusion:ResourceUri {
+                path = 'resource://NeosRulez.Neos.Form.AltchaCaptcha/Public/altcha.min.js'
+            }
+            defer = ${true}
+            async = ${true}
+            type = 'module'
+        }
+    }
+}

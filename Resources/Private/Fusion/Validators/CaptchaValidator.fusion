@@ -1,0 +1,3 @@
+prototype(NeosRulez.Neos.Form.AltchaCaptcha:Validator.Definition) < prototype(Neos.Form.Builder:Validator.Definition) {
+    formElementType = 'NeosRulez.Neos.Form.AltchaCaptcha:Validator'
+}

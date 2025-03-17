@@ -1,0 +1,33 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        NeosRulez.Neos.Form.AltchaCaptcha: true
+  Form:
+    presets:
+      default:
+        formElementTypes:
+          'NeosRulez.Neos.Form.AltchaCaptcha:Captcha':
+            renderingOptions:
+              templatePathPattern: 'resource://NeosRulez.Neos.Form.AltchaCaptcha/Private/Templates/Form/{@type}.html'
+            superTypes:
+              'Neos.Form:FormElement': true
+            properties:
+              elementClassAttribute: form-control
+              elementErrorClassAttribute: is-invalid
+        validatorPresets:
+          'NeosRulez.Neos.Form.AltchaCaptcha:Validator':
+            implementationClassName: NeosRulez\Neos\Form\AltchaCaptcha\Validation\Captcha\CaptchaValidator
+      bootstrap:
+        formElementTypes:
+          'NeosRulez.Neos.Form.AltchaCaptcha:Captcha':
+            renderingOptions:
+              templatePathPattern: 'resource://NeosRulez.Neos.Form.AltchaCaptcha/Private/Templates/Form/{@type}.html'
+            superTypes:
+              'Neos.Form:FormElement': true
+            properties:
+              elementClassAttribute: form-control
+              elementErrorClassAttribute: is-invalid
+        validatorPresets:
+          'NeosRulez.Neos.Form.AltchaCaptcha:Validator':
+            implementationClassName: NeosRulez\Neos\Form\AltchaCaptcha\Validation\Captcha\CaptchaValidator

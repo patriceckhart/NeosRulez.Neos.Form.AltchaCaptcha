@@ -1,0 +1,10 @@
+'NeosRulez.Neos.Form.AltchaCaptcha:Validator':
+  superTypes:
+    'Neos.Form.Builder:AbstractValidator': true
+  ui:
+    label: ALTCHA Captcha validator
+    icon: fas fa-shield-alt
+    inspector:
+      groups:
+        'validator':
+          icon: fas fa-shield-alt

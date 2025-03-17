@@ -1,0 +1,12 @@
+{namespace form=Neos\Form\ViewHelpers}
+{namespace altcha=NeosRulez\Neos\Form\AltchaCaptcha\ViewHelpers}
+<f:layout name="Neos.Form:Field" />
+<f:section name="field">
+    <altcha:altcha property="{element.identifier}" id="{element.uniqueIdentifier}" class="{element.properties.elementClassAttribute} form-control">
+        <altcha-widget challengejson="{challenge -> f:format.json()}" name="{name}"
+                        {f:if(condition: '{settings.hideAltchaLogo}' , then: 'hideLogo' , else: '' )}
+                        {f:if(condition: '{settings.hideFooter}' , then: 'hideFooter' , else: '' )}
+                        {f:if(condition: '{settings.auto} != disabled' , then: 'auto="{settings.auto}' , else: '' )}"
+        ></altcha-widget>
+    </altcha:altcha>
+</f:section>
