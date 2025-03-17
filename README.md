@@ -1,6 +1,6 @@
 # ALTCHA Next-Gen CAPTCHA integration for Neos CMS
 
-A Neos CMS package that integrates ALTCHA CAPTCHA into the Neos CMS Form Builder.
+A Neos CMS package that integrates [ALTCHA CAPTCHA](https://altcha.org/de/) into the Neos CMS Form Builder.
 
 ## Installation
 
