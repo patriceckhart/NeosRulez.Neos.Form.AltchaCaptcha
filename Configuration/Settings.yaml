@@ -37,16 +37,16 @@ Neos:
           'NeosRulez.Neos.Form.AltchaCaptcha:Validator':
             implementationClassName: NeosRulez\Neos\Form\AltchaCaptcha\Validation\Captcha\CaptchaValidator
 
-#NeosRulez:
-#  Neos:
-#    Form:
-#      AltchaCaptcha:
-#        view:
-#          hideAltchaLogo: false
-#          hideFooter: false
-#          auto: false
-#        security:
-#          minNumber: 5000
-#          maxNumber: 15000
-#          hmac: 1742225261
-#          expires: 1200
+NeosRulez:
+  Neos:
+    Form:
+      AltchaCaptcha:
+        view:
+          hideAltchaLogo: false
+          hideFooter: false
+          auto: disabled
+        security:
+          minNumber: 5000
+          maxNumber: 15000
+          hmac: 1742225261
+          expires: 1200

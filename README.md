@@ -20,7 +20,7 @@ NeosRulez:
         view:
           hideAltchaLogo: false
           hideFooter: false
-          auto: false
+          auto: disabled
         security:
           minNumber: 5000
           maxNumber: 15000
