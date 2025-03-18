@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="NeosRulez.Neos.Form.AltchaCaptcha" source-language="de" datatype="plaintext">
+        <body>
+            <trans-unit id="content.ariaLinkLabel" xml:space="preserve">
+				<source>Besuchen Sie Altcha.org</source>
+			</trans-unit>
+            <trans-unit id="content.error" xml:space="preserve">
+				<source>Verifizierung fehlgeschlagen. Versuchen Sie es später erneut.</source>
+			</trans-unit>
+            <trans-unit id="content.expired" xml:space="preserve">
+                <source>Verifizierung abgelaufen. Versuchen Sie es erneut.</source>
+            </trans-unit>
+            <trans-unit id="content.footer" xml:space="preserve">
+                <source>Geschützt durch {altchaLink}</source>
+            </trans-unit>
+            <trans-unit id="content.label" xml:space="preserve">
+                <source>Ich bin kein Bot</source>
+            </trans-unit>
+            <trans-unit id="content.verified" xml:space="preserve">
+                <source>Verifiziert</source>
+            </trans-unit>
+            <trans-unit id="content.verifying" xml:space="preserve">
+                <source>Wird überprüft ...</source>
+            </trans-unit>
+            <trans-unit id="content.waitAlert" xml:space="preserve">
+                <source>Wird überprüft ... Bitte warten.</source>
+            </trans-unit>
+        </body>
+    </file>
+</xliff>

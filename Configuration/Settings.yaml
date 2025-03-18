@@ -3,6 +3,11 @@ Neos:
     fusion:
       autoInclude:
         NeosRulez.Neos.Form.AltchaCaptcha: true
+    userInterface:
+      translation:
+        autoInclude:
+          NeosRulez.Neos.Form.AltchaCaptcha:
+            - 'Captcha'
   Form:
     presets:
       default:
@@ -31,3 +36,17 @@ Neos:
         validatorPresets:
           'NeosRulez.Neos.Form.AltchaCaptcha:Validator':
             implementationClassName: NeosRulez\Neos\Form\AltchaCaptcha\Validation\Captcha\CaptchaValidator
+
+NeosRulez:
+  Neos:
+    Form:
+      AltchaCaptcha:
+        view:
+          hideAltchaLogo: false
+          hideFooter: false
+          auto: false
+        security:
+          minNumber: 5000
+          maxNumber: 15000
+          hmac: 1742225261
+          expires: 1200

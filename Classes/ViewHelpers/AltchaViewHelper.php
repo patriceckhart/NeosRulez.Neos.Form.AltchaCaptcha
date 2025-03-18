@@ -2,6 +2,7 @@
 namespace NeosRulez\Neos\Form\AltchaCaptcha\ViewHelpers;
 
 use Neos\Flow\Annotations as Flow;
+use Neos\Flow\I18n\Translator;
 use Neos\FluidAdaptor\ViewHelpers\Form\AbstractFormFieldViewHelper;
 use NeosRulez\Neos\Form\AltchaCaptcha\Domain\Service\AltchaService;
 
@@ -19,6 +20,12 @@ class AltchaViewHelper extends AbstractFormFieldViewHelper
      * @var AltchaService
      */
     protected $altchaService;
+
+    /**
+     * @Flow\Inject
+     * @var Translator
+     */
+    protected $translator;
 
     /**
      * @var boolean
@@ -50,7 +57,27 @@ class AltchaViewHelper extends AbstractFormFieldViewHelper
         $container->add('name', $name);
         $container->add('challenge', $challenge);
         $container->add('settings', $this->viewSettings);
+
+        $container->add('strings', [
+            'ariaLinkLabel' => $this->translator->translateById('content.ariaLinkLabel', [], null, null, $sourceName = 'Captcha', $packageKey = 'NeosRulez.Neos.Form.AltchaCaptcha'),
+            'error' => $this->translator->translateById('content.error', [], null, null, $sourceName = 'Captcha', $packageKey = 'NeosRulez.Neos.Form.AltchaCaptcha'),
+            'expired' => $this->translator->translateById('content.expired', [], null, null, $sourceName = 'Captcha', $packageKey = 'NeosRulez.Neos.Form.AltchaCaptcha'),
+            'footer' => $this->replaceLink($this->translator->translateById('content.footer', [], null, null, $sourceName = 'Captcha', $packageKey = 'NeosRulez.Neos.Form.AltchaCaptcha')),
+            'label' => $this->translator->translateById('content.label', [], null, null, $sourceName = 'Captcha', $packageKey = 'NeosRulez.Neos.Form.AltchaCaptcha'),
+            'verified' => $this->translator->translateById('content.verified', [], null, null, $sourceName = 'Captcha', $packageKey = 'NeosRulez.Neos.Form.AltchaCaptcha'),
+            'verifying' => $this->translator->translateById('content.verifying', [], null, null, $sourceName = 'Captcha', $packageKey = 'NeosRulez.Neos.Form.AltchaCaptcha'),
+            'waitAlert' => $this->translator->translateById('content.waitAlert', [], null, null, $sourceName = 'Captcha', $packageKey = 'NeosRulez.Neos.Form.AltchaCaptcha')
+        ]);
         return $this->renderChildren();
+    }
+
+    /**
+     * @param string $string
+     * @return string
+     */
+    private function replaceLink(string $string): string
+    {
+        return str_replace('{altchaLink}', '<a href="https://altcha.org" target="_blank">ALTCHA</a>', $string);
     }
 
 }

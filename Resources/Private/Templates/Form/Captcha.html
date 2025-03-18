@@ -3,7 +3,7 @@
 <f:layout name="Neos.Form:Field" />
 <f:section name="field">
     <altcha:altcha property="{element.identifier}" id="{element.uniqueIdentifier}" class="{element.properties.elementClassAttribute} form-control">
-        <altcha-widget challengejson="{challenge -> f:format.json()}" name="{name}"
+        <altcha-widget challengejson="{challenge -> f:format.json()}" name="{name}" strings="{strings -> f:format.json()}"
                         {f:if(condition: '{settings.hideAltchaLogo}' , then: 'hideLogo' , else: '' )}
                         {f:if(condition: '{settings.hideFooter}' , then: 'hideFooter' , else: '' )}
                         {f:if(condition: '{settings.auto} != disabled' , then: 'auto="{settings.auto}' , else: '' )}"
