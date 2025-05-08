@@ -1,0 +1,6 @@
+prototype(NeosRulez.Neos.Form.AltchaCaptcha:Captcha.Definition) < prototype(Neos.Form.Builder:FormElement.Definition) {
+    formElementType = 'NeosRulez.Neos.Form.AltchaCaptcha:Captcha'
+    properties {
+        element = ''
+    }
+}
