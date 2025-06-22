@@ -48,5 +48,5 @@ Neos:
 #        security:
 #          minNumber: 5000
 #          maxNumber: 15000
-#          hmac: 1742225261
+#          hmac: 3f4bb586f04a0c1d93eadab9363a8a3183b4860c
 #          expires: 1200

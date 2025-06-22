@@ -16,7 +16,7 @@ class AltchaService
     protected int $maxNumber;
 
     #[Flow\InjectConfiguration(path: 'security.hmac', package: 'NeosRulez.Neos.Form.AltchaCaptcha')]
-    protected int $hmac;
+    protected string $hmac;
 
     #[Flow\InjectConfiguration(path: 'security.expires', package: 'NeosRulez.Neos.Form.AltchaCaptcha')]
     protected int $expires;
