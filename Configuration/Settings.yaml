@@ -37,6 +37,10 @@ Neos:
           'NeosRulez.Neos.Form.AltchaCaptcha:Validator':
             implementationClassName: NeosRulez\Neos\Form\AltchaCaptcha\Validation\Captcha\CaptchaValidator
 
+  Fusion:
+    defaultContext:
+      Altcha: 'NeosRulez\Neos\Form\AltchaCaptcha\Eel\Helper\AltchaHelper'
+
 #NeosRulez:
 #  Neos:
 #    Form:

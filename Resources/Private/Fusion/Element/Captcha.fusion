@@ -1,6 +1,19 @@
-prototype(NeosRulez.Neos.Form.AltchaCaptcha:Captcha.Definition) < prototype(Neos.Form.Builder:FormElement.Definition) {
-    formElementType = 'NeosRulez.Neos.Form.AltchaCaptcha:Captcha'
-    properties {
-        element = ''
+prototype(NeosRulez.Neos.Form.AltchaCaptcha:Captcha) < prototype(Neos.Form.FusionRenderer:FormElement) {
+    label {
+        @if.notEmpty = ${element.label != ''}
+    }
+
+    fieldContainer {
+        field {
+            tagName = 'altcha-widget'
+            attributes {
+                challengejson = ${Altcha.getChallengeJson()}
+                name = ${elementName}
+                strings = ${Altcha.getContentJson()}
+                hideLogo = ${Configuration.setting('NeosRulez.Neos.Form.AltchaCaptcha.view.hideAltchaLogo') ? true : null}
+                hideFooter = ${Configuration.setting('NeosRulez.Neos.Form.AltchaCaptcha.view.hideFooter') ? true : null}
+                auto = ${Configuration.setting('NeosRulez.Neos.Form.AltchaCaptcha.view.auto') != 'disabled' ? Configuration.setting('NeosRulez.Neos.Form.AltchaCaptcha.view.auto') : null}
+            }
+        }
     }
 }
