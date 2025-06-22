@@ -24,7 +24,7 @@ NeosRulez:
         security:
           minNumber: 5000
           maxNumber: 15000
-          hmac: 1742225261 # hmac int
+          hmac: 3f4bb586f04a0c1d93eadab9363a8a3183b4860c # hmac string
           expires: 1200 # challenge expires in 1200 seconds
 ```
 
