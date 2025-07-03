@@ -30,8 +30,11 @@ class CaptchaValidator extends AbstractValidator
      */
     protected function isValid($value): void
     {
-        if(!$value) {
+        if (!$value) {
             $this->addError('This field is required.', 1742223415);
+        }
+        if (!is_string($value)) {
+            $this->addError('Value must be of type string.', 1751545289);
         }
         if ($this->altchaService->validate($value) === false) {
             $this->addError('Value was not validated correctly.', 1742223424);
