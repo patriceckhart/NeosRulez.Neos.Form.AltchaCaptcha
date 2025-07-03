@@ -3,4 +3,7 @@ prototype(NeosRulez.Neos.Form.AltchaCaptcha:Captcha.Definition) < prototype(Neos
     properties {
         element = ''
     }
+    @cache {
+		maximumLifetime = '300'
+    }
 }
