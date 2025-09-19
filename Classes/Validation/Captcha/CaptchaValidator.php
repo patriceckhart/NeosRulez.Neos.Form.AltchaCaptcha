@@ -35,8 +35,7 @@ class CaptchaValidator extends AbstractValidator
         }
         if (!is_string($value)) {
             $this->addError('Value must be of type string.', 1751545289);
-        }
-        if ($this->altchaService->validate($value) === false) {
+        } else if ($this->altchaService->validate($value) === false) {
             $this->addError('Value was not validated correctly.', 1742223424);
         }
     }
