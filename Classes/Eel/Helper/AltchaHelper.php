@@ -33,7 +33,6 @@ class AltchaHelper implements ProtectedContextAwareInterface
             'waitAlert' => $this->translator->translateById('content.waitAlert', [], null, null, $sourceName = 'Captcha', $packageKey = 'NeosRulez.Neos.Form.AltchaCaptcha')
 
         ];
-
         return json_encode($strings);
     }
 

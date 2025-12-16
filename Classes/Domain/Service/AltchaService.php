@@ -37,8 +37,8 @@ class AltchaService
         return [
             'algorithm' => $challenge->algorithm,
             'challenge' => $challenge->challenge,
-            'number'    => random_int($this->minNumber, $this->maxNumber),
-            'salt'      => $challenge->salt,
+            'number' => random_int($this->minNumber, $this->maxNumber),
+            'salt' => $challenge->salt,
             'signature' => $challenge->signature,
         ];
     }
@@ -50,7 +50,7 @@ class AltchaService
     public function validate(string $payload): bool
     {
         $altcha = new Altcha($this->hmac);
-        if($altcha->verifySolution($payload)) {
+        if ($altcha->verifySolution($payload)) {
             return true;
         }
         return false;
