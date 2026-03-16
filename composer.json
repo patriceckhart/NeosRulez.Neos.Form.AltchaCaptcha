@@ -3,7 +3,7 @@
   "type": "neos-package",
   "name": "neosrulez/neos-form-altchacaptcha",
   "require": {
-    "neos/neos": "^7.0 || ^8.0 || ^8.1 || ^8.2 || ^8.3",
+    "neos/neos": "^7.0 || ^8.0 || ^8.1 || ^8.2 || ^8.3 || ^9.0",
     "altcha-org/altcha": "v1.3.1"
   },
   "autoload": {
